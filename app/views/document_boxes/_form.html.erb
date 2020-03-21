@@ -1,0 +1,5 @@
+<%= form_tag(document_boxes_path, class: 'dropzone', id: 'upload-dropzone') do %>
+  <div class="fallback">
+    <%= file_field_tag('attach[file]') %>
+  </div>
+<% end %>
