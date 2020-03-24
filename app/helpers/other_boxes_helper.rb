@@ -1,0 +1,2 @@
+module OtherBoxesHelper
+end

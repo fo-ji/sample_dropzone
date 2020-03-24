@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_23_151030) do
+ActiveRecord::Schema.define(version: 2020_03_24_135654) do
 
   create_table "document_boxes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "document"
@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(version: 2020_03_23_151030) do
 
   create_table "minutes_boxes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "meeting"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "other_boxes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "other"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
