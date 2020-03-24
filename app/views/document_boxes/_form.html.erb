@@ -3,3 +3,11 @@
     <%= file_field_tag('attach[file]') %>
   </div>
 <% end %>
+
+<br/>
+
+<%= form_tag(minutes_boxes_path, class: 'dropzone', id: 'upload-dropzone') do %>
+  <div class="fallback">
+    <%= file_field_tag('attach[file]') %>
+  </div>
+<% end %>
