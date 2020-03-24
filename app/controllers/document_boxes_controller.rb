@@ -24,7 +24,7 @@ class DocumentBoxesController < ApplicationController
   # POST /document_boxes
   # POST /document_boxes.json
   def create
-    @document_box = DocumentBox.create({'document' => params.require(:file)})
+    @document_box = DocumentBox.create({'document': params.require(:file)})
     # @document_box = DocumentBox.new(document_box_params)
 
     # respond_to do |format|
