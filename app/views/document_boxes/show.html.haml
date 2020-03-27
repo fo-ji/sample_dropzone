@@ -1,0 +1,7 @@
+%p#notice= notice
+%p
+  %strong Document:
+  = @document_box.document
+= link_to 'Edit', edit_document_box_path(@document_box)
+|
+= link_to 'Back', document_boxes_path
