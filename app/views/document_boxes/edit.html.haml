@@ -1,0 +1,9 @@
+%h1 Editing Document Box
+
+= form_with(model: @document_box, local: true) do |f|
+  = f.text_field :name, value: @file_name
+  = f.submit
+
+= link_to 'Show', @document_box
+|
+= link_to 'Back', document_boxes_path

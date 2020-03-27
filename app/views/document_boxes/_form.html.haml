@@ -1,0 +1,11 @@
+= form_tag(document_boxes_path, class: 'dropzone', id: 'upload-dropzone') do
+  .fallback
+    = file_field_tag('attach[file]')
+%br/
+= form_tag(minutes_boxes_path, class: 'dropzone', id: 'upload-dropzone') do
+  .fallback
+    = file_field_tag('attach[file]')
+%br/
+= form_tag(other_boxes_path, class: 'dropzone', id: 'upload-dropzone') do
+  .fallback
+    = file_field_tag('attach[file]')
