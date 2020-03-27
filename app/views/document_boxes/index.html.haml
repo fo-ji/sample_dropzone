@@ -8,7 +8,10 @@
   %tbody
     - @document_boxes.each do |document_box|
       %tr
-        %td= document_box.document.file.basename
+        - if document_box.name.nil?
+          %td= document_box.document.file.basename
+        - else
+          %td= document_box.name
         %td= image_tag(document_box.document_url, width: 100) if document_box.document?
         %td= link_to '書類へのリンク', document_box.document_url
         %td= link_to 'Show', document_box

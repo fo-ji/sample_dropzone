@@ -19,6 +19,11 @@ class DocumentBoxesController < ApplicationController
 
   # GET /document_boxes/1/edit
   def edit
+    if @document_box.name.nil?
+      @file_name = @document_box.document.file.basename
+    else
+      @file_name = @document_box.name
+    end
   end
 
   # POST /document_boxes
@@ -70,6 +75,6 @@ class DocumentBoxesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def document_box_params
-      params.require(:document_box).permit(:document)
+      params.require(:document_box).permit(:document, :name)
     end
 end
