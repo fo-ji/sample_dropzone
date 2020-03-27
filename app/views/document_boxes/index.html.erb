@@ -15,7 +15,7 @@
       <tr>
         <td><%= document_box.document.file.basename %></td>
         <td><%= image_tag(document_box.document_url, width: 100) if document_box.document? %></td>
-          <%# <%= link_to '書類へのリンク', document_box.image_url(:thumb) %>
+        <td><%= link_to '書類へのリンク', document_box.document_url %></td>
         <td><%= link_to 'Show', document_box %></td>
         <td><%= link_to 'Edit', edit_document_box_path(document_box) %></td>
         <td><%= link_to 'Destroy', document_box, method: :delete, data: { confirm: 'Are you sure?' } %></td>
